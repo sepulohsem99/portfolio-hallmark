@@ -1,0 +1,7 @@
+name = "saifullahisonline"
+compatibility_date = "2026-10-28"
+pages_build_output_dir = "dist"
+
+[[kv_namespaces]]
+binding = "RECS"
+id = "41326eadec4c4efda680762bbe90cdf5"
