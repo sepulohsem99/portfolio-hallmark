@@ -5,3 +5,7 @@ __pycache__/
 _build_dist.py
 _fetch_gallery.py
 _fetch_gallery_full.py
+_prep_field.py
+_find_wm.py
+_ratio_field.py
+_portrait_field.py
