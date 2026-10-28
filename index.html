@@ -419,6 +419,35 @@ h1.big{text-wrap:balance;overflow-wrap:break-word;min-width:0;font-family:var(--
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
+
+.fld-lead img{aspect-ratio:16/10;object-position:50% 45%}
+.fld-lead .fld-cap{padding:var(--space-4) var(--space-5)}
+
+.fld-grid2{display:block;column-count:2;column-gap:var(--space-3)}
+.fld-grid2 .fld-fig{break-inside:avoid;margin:0 0 var(--space-3)}
+.fld-grid2 .fld-fig img{aspect-ratio:auto;height:auto}
+@media (max-width:900px){.fld-grid2{column-count:1}}
+/* ITCS field deployment block */
+.fld{margin-top:var(--space-7)}
+.fld-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-3);align-items:start}
+.fld-fig{display:flex;flex-direction:column;position:relative;border:1px solid var(--line);border-radius:14px;background:var(--surface-1);overflow:hidden}
+.fld-fig img{display:block;width:100%;object-fit:cover;background:var(--surface-4)}
+.fld-hero .fld-fig img{aspect-ratio:4/3}
+.fld-cap{padding:var(--space-3) var(--space-3) var(--space-4);border-top:1px solid var(--line)}
+.fld-cap b{display:block;font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--ink);margin-bottom:var(--space-1)}
+.fld-cap span{display:block;font-size:13px;line-height:1.55;color:var(--dim)}
+.fld-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-3)}
+.fld-note{margin-top:var(--space-5);padding-top:var(--space-4);border-top:1px solid var(--line);font-size:13.5px;line-height:1.6;color:var(--dim);max-width:65ch}
+.fld-note a{color:var(--red-lt);text-decoration:underline;text-underline-offset:2px}
+.fld-band{flex-direction:row;align-items:stretch;margin-top:var(--space-3)}
+.fld-band img{width:58%;aspect-ratio:16/9;flex:none}
+.fld-band .fld-cap{flex:1;border-top:0;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;padding:var(--space-5)}
+@media (max-width:900px){.fld-band{flex-direction:column}.fld-band img{width:100%;aspect-ratio:4/3}.fld-band .fld-cap{border-left:0;border-top:1px solid var(--line)}}
+@media (max-width:900px){
+  .fld-hero{grid-template-columns:minmax(0,1fr)}
+  .fld-hero .fld-fig img{aspect-ratio:4/3}
+  .fld-row{grid-template-columns:minmax(0,1fr)}
+}
 </style>
 </head>
 <body>
@@ -441,6 +470,7 @@ h1.big{text-wrap:balance;overflow-wrap:break-word;min-width:0;font-family:var(--
       <a href="#skills" data-sec="skills">Skills</a>
       <a href="#exp" data-sec="exp">Experience</a>
       <a href="gallery.html" data-sec="gallery">Gallery</a>
+      <a href="#field" data-sec="field">Field work</a>
       <a href="#contact" data-sec="contact">Contact</a>
       <a class="tb-cv" href="assets/Saifullah_Muhamad_Resume_2026.pdf" download>Résumé ↓</a>
     </nav>
@@ -908,6 +938,71 @@ build();requestAnimationFrame(f);let rt;addEventListener('resize',()=>{clearTime
 
 </main>
 
+
+<!-- ================= FIELD DEPLOYMENT (ITCS) ================= -->
+<section class="sec" id="field">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>From the room to the depot.</h2></div>
+      <div>
+        <p>ITCS went live for MBPG enforcement in October 2026. I ran the briefing, trained the officers,
+        then stood in the depot while they used it on real vehicles.</p>
+      </div>
+    </div>
+
+    <div class="fld">
+      <figure class="fld-fig fld-lead">
+        <img src="assets/field_training.webp" alt="Presenting the ITCS mobile app modules to MBPG enforcement officers" loading="lazy" width="960" height="720">
+        <figcaption class="fld-cap">
+          <b>Training day, 20 October</b>
+          <span>Notice registration, patrol, tow assignment, tow registry, verification and data submission.
+          First time most of the room had seen the app at all.</span>
+        </figcaption>
+      </figure>
+
+      <div class="fld-grid2">
+        <figure class="fld-fig">
+          <img src="assets/field_devices.webp" alt="Six rugged handset units with ITCS installed, laid out ready for issue" loading="lazy" width="960" height="1280">
+          <figcaption class="fld-cap">
+            <b>Handsets staged</b>
+            <span>Units configured and logged in before issue, so no officer lost field time to setup.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="fld-fig">
+          <img src="assets/field_depot.webp" alt="Explaining the ITCS tow workflow to officers in the vehicle depot" loading="lazy" width="1020" height="654">
+          <figcaption class="fld-cap">
+            <b>Depot walkthrough</b>
+            <span>The part a slide cannot teach: where the tow actually happens, and who keys what in.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="fld-fig">
+          <img src="assets/field_handover.webp" alt="Showing the live ITCS notice screen on a phone to enforcement officers" loading="lazy" width="1020" height="654">
+          <figcaption class="fld-cap">
+            <b>Live screen, real officer</b>
+            <span>Running a notice end to end on the handset, with the officer who would be issuing it.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="fld-fig">
+          <img src="assets/field_briefing.webp" alt="Gathered around a laptop reviewing the ITCS workflow during the depot briefing" loading="lazy" width="1020" height="654">
+          <figcaption class="fld-cap">
+            <b>Questions, on site</b>
+            <span>Where the workflow did not match how they actually work, and what we changed because of it.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="fld-note">
+        Twenty to twenty-one October 2026, Majlis Bandaraya Pasir Gudang. ITCS covers clamp and tow end to end:
+        mobile app for officers, web portal for the office.
+        <a href="https://www.linkedin.com/posts/saifullah-muhamad-4437211ba_businessanalyst-businessanalysis-systemimplementation-ugcPost-7518954574196461568-3zjU/" target="_blank" rel="noopener">I wrote about the build on LinkedIn</a>.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CONTACT ================= -->
 <footer class="contact" id="contact">
   <div class="wrap ct-in">
@@ -1052,7 +1147,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 /* active tab in top nav + bottom nav */
 const navLinks = [...document.querySelectorAll('#tnav a[data-sec], #bnav a[data-sec]')];
-const secs = ['home','work','whoami','process','bugs','skills','exp','gallery','contact'].map(id=>document.getElementById(id)).filter(Boolean);
+const secs = ['home','work','whoami','process','bugs','skills','exp','gallery','field','contact'].map(id=>document.getElementById(id)).filter(Boolean);
 function syncNav(){
   const y = window.scrollY + window.innerHeight*0.35;
   let cur = secs[0].id;
