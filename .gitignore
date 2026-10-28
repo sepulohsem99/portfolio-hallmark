@@ -9,3 +9,5 @@ _prep_field.py
 _find_wm.py
 _ratio_field.py
 _portrait_field.py
+.wrangler/
+node_modules/
