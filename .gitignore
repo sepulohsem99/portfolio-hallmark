@@ -1,0 +1,7 @@
+dist/
+_compare/
+*.orig
+__pycache__/
+_build_dist.py
+_fetch_gallery.py
+_fetch_gallery_full.py
